@@ -1,19 +1,43 @@
+/* background */
+body {
+  background-color: #d4d4d4;
+}
+
+/* heading 1 */
 h1 {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: fantasy;
     font-size: 20px;
-    color: #6666ff;
+    color: #282828;
 }
 
+/* heading 2 */
 h2 {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Gill Sans, sans-serif;
     font-size: 20px;
-    color: #8d8dff;
+    color: #484848;
 }
 
-p,li {
-    font-family: Arial, Helvetica, sans-serif;
+/* paragraphs */ 
+p{
+  font-family: Optima, sans-serif;
 }
 
+/* list */
+li {
+    font-family: Optima, sans-serif;
+}
+
+ul {
+  margin: 0 auto;
+  text-align: center;
+}
+
+li {
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* link styles */
 a:link {
     color: #000000;
     text-decoration: none;
@@ -40,11 +64,6 @@ a:link {
     color: blue;
     text-decoration: none;
     padding:5px;
-  }
-
-  /* the  background colour */
-  body {
-    background-color: rgb(207, 55, 136);
   }
 
   /* form styling */
