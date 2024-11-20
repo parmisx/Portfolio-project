@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+
+  <head>
+    <title>Search for games in <%=shopData.shopName%></title> <!-- change -->
+    <link rel="stylesheet"  type="text/css" href="/main.css" />
+  </head>
+
+  <body>
+
+    <h1>Search for the games in <%=shopData.shopName%></h1>
+
+    <form action="search_result" method="GET">
+      <p>What game are you looking for?</p>
+      <input id="search_box" type="text" name="search_text">
+      <input type="submit" value="Search" class="button">
+    </form>
+    
+  </body>
+
+</html>

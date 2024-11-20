@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+
+  <head>
+    <title>List of users <%=shopData.shopName%></title> <!-- change -->
+    <link rel="stylesheet"  type="text/css" href="/main.css" />
+  </head>
+
+  <body>
+
+    <h1><%=shopData.shopName%> Shop</h1> <!-- change -->
+    
+    <h2>List of all the players registered with us:</h2>
+
+    <ul> <!-- change -->
+      <% availableBooks.forEach(function(users) { %>
+        <li><%= users.username %></li>
+      <% }) %>
+    </ul>
+
+    </body>
+</html>

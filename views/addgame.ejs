@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+
+  <head>
+    <title>Add game to <%=shopData.shopName%></title> <!-- change -->
+    <link rel="stylesheet"  type="text/css" href="/main.css" />
+  </head>
+
+  <body>
+
+    <h1><%=shopData.shopName%>: Add new games!</h1> <!-- change -->
+
+    <form method="POST" action="/books//bookadded"> <!-- change -->
+        <p>Name of game: <input id="name" type="text" name="name" value="" /></p>
+        <p>Price of game: <input id="price" type="text" name="price" value="" /></p>
+        <input type="submit" value="Add Book" class="button"/>
+      </form>
+    
+  </body>
+</html>
+

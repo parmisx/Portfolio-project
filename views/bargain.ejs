@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+
+  <head>
+    <title>Bargain games of <%=shopData.shopName%></title> <!-- change -->
+    <link rel="stylesheet"  type="text/css" href="/main.css" />
+  </head>
+
+  <body>
+
+    <h1><%=shopData.shopName%> Shop</h1> <!-- change -->
+
+    <h2>Here are our bargain games:</h2>
+
+    <p>On this page you can find all the games that are under £20!</p>
+
+    <ul> <!-- change -->
+      <% availableBooks.forEach(function(book) { %>
+        <li><%= book.name %>, £<%=book.price%>, By: <%= book.author_id %></li>
+      <% }) %>
+    </ul>
+    
+    </body>
+</html>
