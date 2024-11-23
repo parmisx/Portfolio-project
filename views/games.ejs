@@ -1,1 +1,24 @@
 <!-- like the weather ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreeToGame Games</title>
+</head>
+<body>
+    <h1>List of Free-to-Play Games</h1>
+    <% if (error) { %>
+        <p style="color: red;"><%= error %></p>
+    <% } else { %>
+        <ul>
+            <% games.forEach(game => { %>
+                <li>
+                    <a href="/freetogame/game/<%= game.id %>"><%= game.title %></a>
+                </li>
+            <% }) %>
+        </ul>
+    <% } %>
+</body>
+</html>

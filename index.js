@@ -75,5 +75,9 @@ app.use('/users', usersRoutes)
 // const apiRoutes = require('./routes/api')
 // app.use('/api', apiRoutes)
 
+// load the route handlers for FreeToGame API
+const freetogameRoutes = require('./routes/games');
+app.use('/games', freetogameRoutes);
+
 // Start the web app listening
 app.listen(port, () => console.log(`Node app listening on port ${port}!`))

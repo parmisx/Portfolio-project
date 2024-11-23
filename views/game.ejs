@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Details</title>
+</head>
+<body>
+    <h1><%= game.title %></h1>
+    <% if (error) { %>
+        <p style="color: red;"><%= error %></p>
+    <% } else { %>
+        <p><strong>Genre:</strong> <%= game.genre %></p>
+        <p><strong>Platform:</strong> <%= game.platform %></p>
+        <p><strong>Developer:</strong> <%= game.developer %></p>
+        <p><strong>Release Date:</strong> <%= game.release_date %></p>
+        <img src="<%= game.thumbnail %>" alt="<%= game.title %>" style="max-width: 300px;">
+        <p><strong>Description:</strong> <%= game.short_description %></p>
+    <% } %>
+</body>
+</html>
