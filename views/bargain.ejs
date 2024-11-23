@@ -2,7 +2,7 @@
 <html>
 
   <head>
-    <title>Bargain games of <%=shopData.shopName%></title> <!-- change -->
+    <title>Bargain games of <%=shopData.shopName%></title>
     <link rel="stylesheet"  type="text/css" href="/main.css" />
   </head>
 
@@ -10,8 +10,8 @@
   <nav>
 
     <ul class="nav-list">
-      <li><a href="/">Home</a></li> <!-- change -->
-      <li><a href="books/search">Search</a></li> <!-- change -->
+      <li><a href="/">Home</a></li>
+      <li><a href="game/search">Search</a></li> <!-- change -->
       <li><a href="users/login">Login</a></li> <!-- change -->
       <li><a href="logout">Logout</a></li> <!-- change -->
     </ul>
@@ -20,15 +20,15 @@
 
   <body>
 
-    <h1><%=shopData.shopName%> Shop</h1> <!-- change -->
+    <h1><%=shopData.shopName%> Shop</h1>
 
     <h2>Here are our bargain games:</h2>
 
     <p>On this page you can find all the games that are under £20!</p>
 
     <ul> <!-- change -->
-      <% availableBooks.forEach(function(book) { %>
-        <li><%= book.name %>, £<%=book.price%>, By: <%= book.author_id %></li>
+      <% availableGames.forEach(function(game) { %>
+        <li><%= game.name %>, £<%=game.price%> </li>
       <% }) %>
     </ul>
     

@@ -2,7 +2,7 @@
 <html>
 
   <head>
-    <title>Add game to <%=shopData.shopName%></title> <!-- change -->
+    <title>Add game to <%=shopData.shopName%></title>
     <link rel="stylesheet"  type="text/css" href="/main.css" />
   </head>
   
@@ -11,7 +11,7 @@
 
     <ul class="nav-list">
       <li><a href="/">Home</a></li> <!-- change -->
-      <li><a href="books/search">Search</a></li> <!-- change -->
+      <li><a href="game/search">Search</a></li> <!-- change -->
       <li><a href="users/login">Login</a></li> <!-- change -->
       <li><a href="logout">Logout</a></li> <!-- change -->
     </ul>
@@ -19,12 +19,12 @@
   </nav>
   <body>
 
-    <h1><%=shopData.shopName%>: Add new games!</h1> <!-- change -->
+    <h1><%=shopData.shopName%>: Add new games!</h1>
 
-    <form method="POST" action="/books//bookadded"> <!-- change -->
+    <form method="POST" action="/games//gameadded"> <!-- change -->
         <p>Name of game: <input id="name" type="text" name="name" value="" /></p>
         <p>Price of game: <input id="price" type="text" name="price" value="" /></p>
-        <input type="submit" value="Add Book" class="button"/>
+        <input type="submit" value="Add Game" class="button"/>
       </form>
     
   </body>
