@@ -10,10 +10,10 @@
   <nav>
 
     <ul class="nav-list">
-      <li><a href="index.html" class="active">about</a></li>
-      <li><a href="contact.html" >contact</a></li>
-      <li><a href="projects.html">projects</a></li>
-      <li><a href="experiences.html">experiences</a></li>
+      <li><a href="index">Home</a></li> <!-- change -->
+      <li><a href="books/search">Search</a></li> <!-- change -->
+      <li><a href="users/login">Login</a></li> <!-- change -->
+      <li><a href="logout">Logout</a></li> <!-- change -->
     </ul>
 
   </nav>
@@ -21,19 +21,19 @@
   <body>
 
     <h1>Welcome to <%=shopData.shopName%></h1> <!-- change -->
-    <li>
-      <ul><a href="about">About <%=shopData.shopName%></a></ul> <!-- change -->
-      <ul><a href="books/search">Search for games</a></ul> <!-- change -->
-      <ul><a href="books/addbook">Add a new game</a></ul> <!-- change -->
-      <ul><a href="books/list">List of all the games</a></ul> <!-- change -->
-      <ul><a href="books/bargainbooks">Bargain games</a></ul> <!-- change -->
-      <ul><a href="weather">Weather Forecast</a></ul> <!-- change !!! -->
-      <ul><a href="users/register">Register with us</a></ul> <!-- change -->
-      <ul><a href="users/list">List of our players</a></ul> <!-- change -->
-      <ul><a href="users/login">Login</a></ul> <!-- change -->
-      <ul><a href="logout">Logout</a></ul> <!-- change -->
-      <ul><a href="api/books">Games API</a></ul> <!-- change -->
-    </li>
+
+    <p>Platform all for gamers to explore new games!</p>
+    
+    <ul class="route-options">
+      <li><a href="about">About <%=shopData.shopName%></a></li> <!-- change -->
+      <li><a href="books/addbook">Add a new game</a></li> <!-- change -->
+      <li><a href="books/list">List of all the games</a></li> <!-- change -->
+      <li><a href="books/bargainbooks">Bargain games</a></li> <!-- change -->
+      <li><a href="weather">Weather Forecast</a></li> <!-- change !!! -->
+      <li><a href="users/register">Register with us</a></li> <!-- change -->
+      <li><a href="users/list">List of our players</a></li> <!-- change -->
+      <li><a href="api/books">Games API</a></li> <!-- change -->
+    </ul>
 
   </body>
 </html>
