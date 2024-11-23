@@ -55,7 +55,7 @@ router.get('/search_result', function (req, res, next) {
 
 
 router.get('/list', function(req, res, next) {
-    let sqlquery = "SELECT * FROM games" // query database to get all the books
+    let sqlquery = "SELECT * FROM games" // query database to get all the games
     // execute sql query
     db.query(sqlquery, (err, result) => {
         if (err) {

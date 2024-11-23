@@ -39,9 +39,9 @@ app.use(express.static(__dirname + '/public'))
 // Define the database connection
 const db = mysql.createConnection ({
     host: 'localhost',
-    user: 'bettys_books_app',
+    user: 'game_town_app',
     password: 'qwertyuiop',
-    database: 'bettys_books'
+    database: 'game_town'
 })
 // Connect to the database
 db.connect((err) => {
@@ -63,9 +63,9 @@ app.use('/', mainRoutes)
 const usersRoutes = require('./routes/users')
 app.use('/users', usersRoutes)
 
-// Load the route handlers for /books
-// const booksRoutes = require('./routes/books')
-// app.use('/books', booksRoutes)
+// Load the route handlers for /games
+const gamesRoutes = require('./routes/games')
+app.use('/games', gamesRoutes)
 
 // load the route handlers for weather
 // const weatherRoutes = require('./routes/weather')

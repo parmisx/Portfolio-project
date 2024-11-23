@@ -69,7 +69,7 @@ router.get('/list', redirectLogin, function(req, res, next) {
         if (err) {
             next(err)
         }
-        res.render("userslist.ejs", {availableBooks:result})
+        res.render("userslist.ejs", {availableGames:result})
      })
 })
 
