@@ -1,8 +1,8 @@
 -- # create database script for Game Town
 
 -- # create the database 
-CREATE DATABASE IF NOT EXISTS game_town
-USE game_town
+CREATE DATABASE IF NOT EXISTS game_town;
+USE game_town;
 
 -- # create the table for games
 CREATE TABLE IF NOT EXISTS games (
