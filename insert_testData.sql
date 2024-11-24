@@ -11,5 +11,5 @@ VALUES
     ('The last of us', 15.99),
     ('Fornite', 0),
     ('It takes two', 34.99),
-    ('Marvels Spider-man', 49.55)
+    ('Marvels Spider-man', 49.55),
     ('Call of Duty: Black Ops 6', 53.99);

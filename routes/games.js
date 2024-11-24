@@ -89,7 +89,7 @@ router.get('/bargaingames', function(req, res, next) {
         if (err) {
             next(err)
         }
-        res.render("bargains.ejs", {availableGames:result})
+        res.render("bargain.ejs", {availableGames:result})
     })
 }) 
 
