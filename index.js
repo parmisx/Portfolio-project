@@ -39,9 +39,9 @@ app.use(express.static(__dirname + '/public'))
 // Define the database connection
 const db = mysql.createConnection ({
     host: 'localhost',
-    user: 'game_town_app',
+    user: 'bettys_books_app',
     password: 'qwertyuiop',
-    database: 'game_town'
+    database: 'bettys_books'
 })
 // Connect to the database
 db.connect((err) => {
