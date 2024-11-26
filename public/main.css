@@ -189,4 +189,5 @@ table{
 
 td, tr, th{
   padding: 20px;
+  border: 1px dotted #474747;
 }
