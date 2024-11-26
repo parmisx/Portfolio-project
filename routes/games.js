@@ -35,7 +35,7 @@ router.get('/addgame', function (req, res, next) {
 
 router.post('/gameadded', function (req, res, next) {
     // saving data in database
-    let sqlquery = "INSERT INTO game (name, price) VALUES (?,?)"
+    let sqlquery = "INSERT INTO games (name, price) VALUES (?,?)"
     // execute sql query
     let newrecord = [req.body.name, req.body.price]
     db.query(sqlquery, newrecord, (err, result) => {
