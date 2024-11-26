@@ -24,7 +24,23 @@
 
     <h2>Here are our bargain games:</h2>
 
-    <p>On this page you can find all the games that are under £20!</p>
+    <p>On this page you can find all the games that are under £20!
+      <br>You do not want to miss out on these limited time offers!
+      <br>Some are even FREE!! 
+    </p>
+
+    <div class="games-list-section">
+      <table class="games-table">
+        <tr>
+          <th>GAME NAME</th>
+          <th>PRICE</th>
+      </tr>
+      <tr> <% availableGames.forEach(function(game) { %> </tr>
+        <td> <%= game.name %> </td>
+        <td> £<%= game.price %> </td>
+      <% }) %>
+      </table>
+    </div>
 
     <ul> <!-- change -->
       <% availableGames.forEach(function(game) { %>

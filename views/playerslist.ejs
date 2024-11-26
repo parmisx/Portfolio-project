@@ -24,9 +24,23 @@
     
     <h2>List of all the players registered with us:</h2>
 
+    <div class="games-list-section">
+      <table class="games-table">
+        <tr>
+          <th>PLAYER</th>
+          <th>USERNAME</th>
+      </tr>
+      <tr> <% availableGames.forEach(function(players) { %> </tr>
+        <td> <%= players.first_name %> </td>
+        <td> <%= players.username %> </td>
+      <% }) %>
+      </table>
+    </div>
+
     <ul> <!-- change -->
       <% availableGames.forEach(function(players) { %>
         <li><%= players.username %></li>
+        <li><%= players.first_name %></li>
       <% }) %>
     </ul>
 

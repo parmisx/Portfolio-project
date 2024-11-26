@@ -24,6 +24,19 @@
     
     <h2>All the games that we sell!</h2>
 
+    <div class="games-list-section">
+      <table class="games-table">
+        <tr>
+          <th>GAME NAME</th>
+          <th>PRICE</th>
+      </tr>
+      <tr> <% availableGames.forEach(function(game) { %> </tr>
+        <td> <%= game.name %> </td>
+        <td> £<%= game.price %> </td>
+      <% }) %>
+      </table>
+    </div>
+    
     <ul> <!-- change -->
       <% availableGames.forEach(function(game) { %> 
         <li><%= game.name %>, £<%= game.price %> </li>
