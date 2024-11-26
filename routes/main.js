@@ -12,8 +12,8 @@ router.get('/about',function(req, res, next){
 })
 
 const redirectLogin = (req, res, next) => {
-    if(!req.session.userId){
-        res.redirect('/user/login');
+    if(!req.session.playerId){
+        res.redirect('/player/login');
     } else{
         next();
     }

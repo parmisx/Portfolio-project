@@ -8,7 +8,7 @@ const bcrypt = require('bcrypt');
 const saltRounds = 10;
 
 const redirectLogin = (req, res, next) => {
-    if(!req.session.userId){
+    if(!req.session.playerId){
         res.redirect('./login') // redirect to the login page
     } else{
         next(); // move to the next middleware function
@@ -43,11 +43,11 @@ router.post('/registered', [
                     next(err);
                 } else {
                 // saving data in database
-                let sqlquery = "INSERT INTO users(username, first_name, last_name, email, hashedPassword) VALUES (?, ?, ?, ?, ?)";
+                let sqlquery = "INSERT INTO players (username, first_name, last_name, email, hashedPassword) VALUES (?, ?, ?, ?, ?)";
                 // execute the query
-                let newUser = [req.sanitize(req.body.username), req.sanitize(req.body.firstName), req.sanitize(req.body.lastName), req.sanitize(req.body.email), hashedPassword];
+                let newPlayer = [req.sanitize(req.body.username), req.sanitize(req.body.firstName), req.sanitize(req.body.lastName), req.sanitize(req.body.email), hashedPassword];
 
-                db.query(sqlquery, newUser, (err, result)=>{
+                db.query(sqlquery, newPlayer, (err, result)=>{
                     if(err){
                         next(err);
                     } else{                                      
@@ -63,13 +63,13 @@ router.post('/registered', [
 });
 
 router.get('/list', redirectLogin, function(req, res, next) {
-    let sqlquery = "SELECT * FROM users" // query database to get all the users
+    let sqlquery = "SELECT * FROM players" // query database to get all the players
     // execute sql query
     db.query(sqlquery, (err, result) => {
         if (err) {
             next(err)
         }
-        res.render("userslist.ejs", {availableGames:result})
+        res.render("playerslist.ejs", {availableGames:result})
      })
 })
 
@@ -82,7 +82,7 @@ router.post('/loggedin',
     check('password').isLength({min:8})],
     function(req,res,next){
     const username = req.sanitize(req.body.username);
-    let sqlquery = "SELECT hashedPassword FROM users WHERE username = ?"; // query database to get the hashed password with the username
+    let sqlquery = "SELECT hashedPassword FROM players WHERE username = ?"; // query database to get the hashed password with the username
     // execute sql query
     db.query(sqlquery, [username], (err, result) => {
         if(err){
@@ -96,7 +96,7 @@ router.post('/loggedin',
                 if(err){
                     next(err);
                 } else if(result == true){ // login with right username and password
-                    req.session.userId = req.sanitize(req.body.username); // save user session here, when login is successful
+                    req.session.playerId = req.sanitize(req.body.username); // save user session here, when login is successful
                     res.send(username + ", you are now logged in!"); 
                 } else{ // error if password is wrong but username is right 
                     res.send("Login failed: Wrong password! please try again.")

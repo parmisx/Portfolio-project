@@ -2,7 +2,7 @@
 <html>
 
   <head>
-    <title>List of users <%=shopData.shopName%></title>
+    <title>List of Players <%=shopData.shopName%></title>
     <link rel="stylesheet"  type="text/css" href="/main.css" />
   </head>
 
@@ -12,7 +12,7 @@
     <ul class="nav-list">
       <li><a href="/">Home</a></li> <!-- change -->
       <li><a href="games/search">Search</a></li> <!-- change -->
-      <li><a href="users/login">Login</a></li> <!-- change -->
+      <li><a href="players/login">Login</a></li> <!-- change -->
       <li><a href="logout">Logout</a></li> <!-- change -->
     </ul>
 
@@ -25,8 +25,8 @@
     <h2>List of all the players registered with us:</h2>
 
     <ul> <!-- change -->
-      <% availableGames.forEach(function(users) { %>
-        <li><%= users.username %></li>
+      <% availableGames.forEach(function(players) { %>
+        <li><%= players.username %></li>
       <% }) %>
     </ul>
 

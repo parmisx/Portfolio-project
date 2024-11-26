@@ -59,9 +59,9 @@ app.locals.shopData = {shopName: "Game Town"}
 const mainRoutes = require("./routes/main")
 app.use('/', mainRoutes)
 
-// Load the route handlers for /users
-const usersRoutes = require('./routes/users')
-app.use('/users', usersRoutes)
+// Load the route handlers for /players
+const playersRoutes = require('./routes/players')
+app.use('/players', playersRoutes)
 
 // Load the route handlers for /games
 const gamesRoutes = require('./routes/games')

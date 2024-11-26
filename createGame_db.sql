@@ -29,12 +29,13 @@ VALUES
 CREATE TABLE IF NOT EXISTS players (
     id INT AUTO_INCREMENT,
     username VARCHAR(50) NOT NULL UNIQUE,
-    fire_name VARCHAR(50) NOT NULL,
-    last_name VARCHAR(100) NOT NULL UNIQUE,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
     hashedPassword VARCHAR(255) NOT NULL,
     PRIMARY KEY(id)
 );
 
 -- # create the app user
 CREATE USER IF NOT EXISTS 'game_town_app'@'localhost' IDENTIFIED BY 'qwertyuiop'; 
-GRANT ALL PRIVILEGES ON game_town.* TO ' game_town_app'@'localhost';
+GRANT ALL PRIVILEGES ON game_town.* TO 'game_town_app'@'localhost';
