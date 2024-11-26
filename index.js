@@ -68,12 +68,12 @@ const gamesRoutes = require('./routes/games')
 app.use('/games', gamesRoutes)
 
 // load the route handlers for weather
-// const weatherRoutes = require('./routes/weather')
-// app.use('/', weatherRoutes)
+const weatherRoutes = require('./routes/weather')
+app.use('/', weatherRoutes)
 
 // load the route handlers for books api
-// const apiRoutes = require('./routes/api')
-// app.use('/api', apiRoutes)
+const apiRoutes = require('./routes/api')
+app.use('/api', apiRoutes)
 
 // load the route handlers for FreeToGame API
 const freetogameRoutes = require('./routes/games');
