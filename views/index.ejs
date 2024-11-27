@@ -10,10 +10,10 @@
   <nav>
 
     <ul class="nav-list">
-      <li><a href="/">Home</a></li> <!-- change -->
-      <li><a href="games/search">Search</a></li> <!-- change -->
-      <li><a href="players/login">Login</a></li> <!-- change -->
-      <li><a href="logout">Logout</a></li> <!-- change -->
+      <li><a href="/">Home</a></li> 
+      <li><a href="games/search">Search</a></li> 
+      <li><a href="players/login">Login</a></li> 
+      <li><a href="logout">Logout</a></li> 
     </ul>
 
   </nav>
@@ -22,17 +22,19 @@
 
     <h1>Welcome to <%=shopData.shopName%></h1>
 
-    <p>Platform all for gamers to explore new games!</p>
+    <p>Platform all for gamers to explore new games!
+      <br>Make sure to explore all areas here to find something you'd love!
+    </p>
     
     <ul class="route-options">
-      <li><a href="about">About <%=shopData.shopName%></a></li> <!-- change -->
-      <li><a href="games/addgame">Add a new game</a></li> <!-- change -->
-      <li><a href="games/list">List of all the games</a></li> <!-- change -->
-      <li><a href="games/bargaingames">Bargain games</a></li> <!-- change -->
-      <li><a href="weather">Weather Forecast</a></li> <!-- change !!! -->
-      <li><a href="players/register">Register with us</a></li> <!-- change -->
-      <li><a href="players/list">List of our players</a></li> <!-- change -->
-      <li><a href="api/games">Games API</a></li> <!-- change -->
+      <h3><a href="about"><li>About <%=shopData.shopName%></li></a></h3>
+      <h3><a href="games/addgame"><li>Add a new game</li></a></h3>
+      <h3><a href="games/list"><li>List of all the games</li></a></h3>
+      <h3><a href="games/bargaingames"><li>Bargain games</li></a></h3>
+      <h3><a href="weather"><li>Weather Forecast</li></a></h3>
+      <h3><a href="players/register"><li>Register with us</li></a></h3>
+      <h3><a href="players/list"><li>List of our players</li></a></h3>
+      <h3><a href="api/games"><li>Games API</li></a></h3>
     </ul>
 
   </body>

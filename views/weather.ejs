@@ -1,12 +1,29 @@
 <!doctype html>
 <html>
+
   <head>
     <title>Weather Forecast</title>
     <link rel="stylesheet"  type="text/css" href="/main.css" />
   </head>
+
+  <!-- nav -->
+  <nav>
+
+    <ul class="nav-list">
+      <li><a href="/">Home</a></li> <!-- change -->
+      <li><a href="game/search">Search</a></li> <!-- change -->
+      <li><a href="players/login">Login</a></li> <!-- change -->
+      <li><a href="logout">Logout</a></li> <!-- change -->
+    </ul>
+  
+  </nav>
+
   <body>
+
     <h1><%=shopData.shopName%> Shop</h1>
+
     <h2>The weather forecast for different cities</h2>
+
     <p><a href="/londonnow">London right now</a></p>
 
     <form action="/weather" method="POST">
