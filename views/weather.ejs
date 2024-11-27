@@ -32,13 +32,15 @@
       <input type="submit" value="Search" class="button">
     </form>
     
-    <% if (weatherForecast) { %>
-      <p>Weather in <%= weatherForecast.name %> is...</p>
-      <p>The temperature is: <%= weatherForecast.temp %> degrees</p>
-      <p>The humidity is: <%= weatherForecast.humidity %></p>
-      <p>The wind speed is: <%= weatherForecast.wind %></p>
-      <p>The time is: <%= weatherForecast.timezoneDisplay %></p>
+    <div class="weather-results">
+      <% if (weatherForecast) { %>
+        <p>Weather in <%= weatherForecast.name %> is...</p>
+        <p>The temperature is: <%= weatherForecast.temp %> degrees</p>
+        <p>The humidity is: <%= weatherForecast.humidity %></p>
+        <p>The wind speed is: <%= weatherForecast.wind %></p>
+        <p>The time is: <%= weatherForecast.timezoneDisplay %></p>
       <% } %>
+    </div>
 
     </body>
 </html>
