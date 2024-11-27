@@ -74,9 +74,20 @@ a:link {
 
   /* form styling */
   form {
-    margin: 20px;
+    /* margin: 20px;
     padding: 5px;
-    border: none;
+    border: none; */
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #f3f3f3;
+    border: 1.5px solid #282828;
+    box-shadow: 0 0 10px #adadad;
+    margin-left: auto;
+    margin-right: auto;
+    /* width: 500px;
+    height: 400px; */
+    height: 50%;
+    width: 20%;
   }
 
   input{
@@ -89,9 +100,13 @@ a:link {
     height: 20px;
   }
   .button{
-    width: 80px;
-    height: 30px;
-    background: #6666ff;
+    width: 120px;
+    height: 50px;
+    background: #e4a7a7;
+    font-size: 20px;
+  }
+  .button:hover{
+    background-color: #dd6e6e;
   }
 
 /*          NAV         */
