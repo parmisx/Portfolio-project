@@ -196,6 +196,10 @@ td, tr, th{
   border: 1px dotted #474747;
 }
 
+th{
+  background-color: #fbe3e3;
+}
+
 .weather-results{
   margin-left: auto;
   margin-right: auto;
