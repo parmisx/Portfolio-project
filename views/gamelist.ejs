@@ -6,14 +6,13 @@
     <link rel="stylesheet"  type="text/css" href="/main.css" />
   </head>
 
-  <!-- nav -->
   <nav>
 
     <ul class="nav-list">
-      <li><a href="/">Home</a></li> <!-- change -->
-      <li><a href="games/search">Search</a></li> <!-- change -->
-      <li><a href="players/login">Login</a></li> <!-- change -->
-      <li><a href="logout">Logout</a></li> <!-- change -->
+      <li><a href="/">Home</a></li>
+      <li><a href="games/search">Search</a></li>
+      <li><a href="players/login">Login</a></li>
+      <li><a href="logout">Logout</a></li> 
     </ul>
 
   </nav>
@@ -36,12 +35,6 @@
       <% }) %>
       </table>
     </div>
-    
-    <ul> <!-- change -->
-      <% availableGames.forEach(function(game) { %> 
-        <li><%= game.name %>, £<%= game.price %> </li>
-      <% }) %>
-    </ul>
 
     </body>
 </html>
