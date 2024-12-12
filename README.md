@@ -14,4 +14,4 @@ Install these if you haven't already:
 - npm install mysql2
 - sudo apt install node.js
 
-to get the application running: node index.js 
+To get the application running: node index.js 
