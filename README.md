@@ -1,6 +1,6 @@
 # Portfolio-project
 Portfolio project for Databases and the Web module  
-Game Town is a game website where gamers can find many games at different prices and it also uses FreeToGame's API to have a large database of games that can be searched and browsed on Game Town.  
+Game Town is a game website where gamers can find many games at different prices and it also uses FreeToGame's API (https://www.freetogame.com/) to have a large database of games that can be searched and browsed on Game Town.  
 
 ## How to set up the application
 Install these if you haven't already:
