@@ -4,6 +4,11 @@ Game Town is a game website where gamers can find many games at different prices
 
 ## How to set up the application
 Install these if you haven't already:
+- npm install bcryptjs
+- npm install bycrpt
+If you get an bcrypt error do this and then install bcrypt and bcryptjs: npm uninstall bcrypt
+
+If you get more error try installing these: 
 - npm install
 - npm install bcrypt
 - npm install ejs
