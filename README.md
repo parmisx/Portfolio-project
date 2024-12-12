@@ -7,7 +7,7 @@ Install these if you haven't already:
 - npm install bcryptjs
 - npm install bcrypt  
    
-If you get an bcrypt error do this and then install bcrypt and bcryptjs: npm uninstall bcrypt
+If you get an bcrypt error do this (npm uninstall bcrypt) and then install bcrypt and bcryptjs again.
 
 If you get more error try installing these: 
 - npm install
