@@ -1,6 +1,6 @@
 /* background */
 body {
-  background-color: #d4d4d4;
+  background-color: #2e4053;
   margin: 0;
   padding: 0;
 }
@@ -9,7 +9,7 @@ body {
 h1 {
     font-family: fantasy;
     font-size: 20px;
-    color: #282828;
+    color: #d6dbdf;
     margin: 50px 0 20px 80px;
 }
 
@@ -17,7 +17,7 @@ h1 {
 h2 {
     font-family: Gill Sans, sans-serif;
     font-size: 20px;
-    color: #484848;
+    color: #d6dbdf;
     margin: 30px 80px 20px 80px;
 }
 
@@ -25,18 +25,19 @@ h2 {
 p{
   font-family: Optima, sans-serif;
   margin: 30px 80px 20px 80px;
+  color: #d6dbdf;
 }
 
 /* link styles */
 a:link {
-    color: #000000;
+    color: #d6dbdf;
     text-decoration: none;
     padding:5px;
-  }
+}
   
 /* visited link */
 a:visited {
-  color: #000000;;
+  color: #d6dbdf;
   text-decoration: none;
   padding:5px;
 }
@@ -45,19 +46,15 @@ a:hover{
   color: #dd6e6e;
 }
 
-/* mouse over link */
+/* mouse hover link */
 .route-options li:hover {
   color: #dd6e6e;
   text-decoration: none;
-  /* background-color: #000000;; */
   padding:5px;
 }
 
 /* form styling */
 form {
-  /* margin: 20px;
-  padding: 5px;
-  border: none; */
   padding: 20px;
   border-radius: 5px;
   background-color: #f3f3f3;
@@ -65,12 +62,19 @@ form {
   box-shadow: 0 0 10px #adadad;
   margin-left: auto;
   margin-right: auto;
-  /* width: 500px;
-  height: 400px; */
-  height: 50%;
-  width: 23%;
+  height: auto;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
+form p{
+  color: #1c2833;
+}
+
+/* form input bar */
 input{
   border: none;
   border-radius: 5px;
@@ -81,12 +85,14 @@ input{
   height: 20px;
 }
 
+/* submit button */
 .button{
   width: 120px;
   height: 50px;
   background: #e4a7a7;
   font-size: 17px;
   border-radius: 50px;
+  margin-top: 15px;
 }
 
 .button:hover{
@@ -98,15 +104,13 @@ nav{
   display: flex;
   justify-content: space-around;
   align-items: center;
-  /* min-height: 11vh; */
-  background-color: #f3f3f3;
+  background-color: #1c2833;
   box-shadow: 0 0 10px #adadad; 
-  /* position: fixed; */
   width: 100%;
   height: 70px;
-  /* z-index: 100; */
 }
 
+/* navigation lists */
 .nav-list{
   display: flex;
   justify-content: space-around;
@@ -116,7 +120,6 @@ nav{
   list-style: none;
 }
 .nav-list li:hover{
-  /* transform: scale(1.5); */
   transition-duration: 500ms;
 }
 
@@ -124,24 +127,22 @@ nav{
   color: #dd6e6e;
 }
 
+/* links */
 a:link, a:visited{
   text-decoration: none;
-  /* color: #282828; */
   letter-spacing: 1px;
 }
-/* a:hover{
-  color: #dd6e6e;
-  transform: scale(1.5); /* social media icons enlarges */
-  /* transition-duration: 500ms; */
-/* } */
 
-/* picked nav option gets a green background */
-/* .active{ */
-  /* background: #9c6edd; */
-  /* border-radius: 100px; */
-  /* padding: 13px;
-  color: #dd6e6e;
-} */
+/* the routes in index.ejs*/
+.route-section{
+  border: 1.5px solid #282828;
+  border-radius: 20px;
+  background-color: #f3f3f3;
+  width: 80%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .route-options ul{
   text-align: center;
@@ -149,44 +150,36 @@ a:link, a:visited{
 
 .route-options{
   display: grid;
-  grid-template-columns: repeat(6,1fr);
-  gap: 5px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  margin: 0 auto;
   border: 1.5 solid #3d0808;
-  margin: 25px;
 }
 
+/* the list of all the routes */
 .route-options li{
-  margin: 10px;
   padding: 5px;
   border-radius: 5px;
-  border: 2px #dd6e6e solid;
+  border: 2px #282828 solid;
   display: inline-block;
   vertical-align: top;
   box-shadow: 0px 0px 5px #777777;
   height: 50px;
   width: 130px;
   text-align: center;
+  background-color: #5d6d7e;
 }
 
 .route-options li:hover{
   transform: scale(1.2);
   transition-duration: 500ms;
-  /* box-shadow: 0px 0px 5px #777777; */
 }
 
-.route-section{
-  border: 1.5px solid #282828;
-  border-radius: 20px;
-  width: 80%;
-  height: 50%;
-  margin: 100px;
-}
-
+/* the games list table in gamelist.ejs */
 .games-list-section{
   margin: 50px;
-  /* padding: 10px; */
 }
 
+/* the games table */
 table{
   text-align: center;
   table-layout: fixed;
@@ -205,15 +198,99 @@ td, tr, th{
 }
 
 th{
-  background-color: #fbe3e3;
+  background-color: #dd6e6e;
+  width: 30%;
 }
 
+/* the weather forecast results section */
 .weather-results{
   margin-left: auto;
   margin-right: auto;
+  margin-top: 20x;
   border: 1.5px dotted #474747;
   border-radius: 10px;
   background-color: #f3f3f3;
-  width: 20%;
-  height: 20%;
+  width: 30%;
+  height: auto;
+  color: #1c2833;
+  padding: 20px;
+}
+
+.weather-results p{
+  color: #1c2833;
+  margin: 5px 0;
+}
+
+/* form for searching games in the api */
+form select{
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  box-shadow: 0px 0px 5px #777777;
+  background: #f2f2ff;
+  width: 200px;
+  height: 35px;
+}
+
+/* games container */
+.games-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* games list */
+.game-list {
+  background-color: #f3f3f3;
+  border-radius: 5px;
+  border: 2px solid #000000;
+  box-shadow: 0 4px 10px #777777;
+  overflow: hidden;
+}
+
+/* games images */
+.game-list img {
+  width: 100%;
+  height: auto;
+  border-bottom: 2px solid #000000;
+}
+
+/* information about the games */
+.game-info {
+  padding: 15px;
+  text-align: center;
+}
+
+.game-info h3 {
+  font-size: 25px;
+  color: #34495e;
+  margin-bottom: 10px;
+}
+
+.game-info p {
+  font-size: 15px;
+  color: #34495e;
+  margin: 5px 0;
+}
+
+/* check out button */
+.game-info a {
+  display: inline-block;
+  margin-top: 15px;
+  padding-top: 15px;
+  font-size: 17px;
+  background-color: #dd6e6e;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 50px;
+  width: 120px;
+  height: 30px;
+}
+
+/* check out button hover */
+.game-info a:hover {
+  background-color: #e4a7a7;
 }

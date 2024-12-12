@@ -10,10 +10,7 @@
   <nav>
 
     <ul class="nav-list">
-      <li><a href="/">Home</a></li> <!-- change -->
-      <li><a href="games/search">Search</a></li> <!-- change -->
-      <li><a href="players/login">Login</a></li> <!-- change -->
-      <li><a href="logout">Logout</a></li> <!-- change -->
+      <li><a href="/">HOME</a></li> 
     </ul>
 
   </nav>
@@ -22,10 +19,13 @@
 
     <h1>Search for the games in <%=shopData.shopName%></h1>
 
-    <form action="search_result" method="GET">
+    <h2>Let's see if we have the game that you are looking for...</h2>
+
+    <!-- form to search for games in the database -->
+    <form action="search_result" method="GET"> <!-- get the search results from the database -->
       <p>What game are you looking for?</p>
-      <input id="search_box" type="text" name="search_text">
-      <input type="submit" value="Search" class="button">
+      <input id="search_box" type="text" name="search_text"> <!-- type game name here -->
+      <input type="submit" value="Search" class="button"> <!-- submit button to search for the game -->
     </form>
     
   </body>

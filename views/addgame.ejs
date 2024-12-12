@@ -10,22 +10,21 @@
   <nav>
 
     <ul class="nav-list">
-      <li><a href="/">Home</a></li> <!-- change -->
-      <li><a href="game/search">Search</a></li> <!-- change -->
-      <li><a href="players/login">Login</a></li> <!-- change -->
-      <li><a href="logout">Logout</a></li> <!-- change -->
+      <li><a href="/">HOME</a></li> 
     </ul>
 
   </nav>
+  
   <body>
 
     <h1><%=shopData.shopName%></h1>
-    <p>Add new games to our database of all these games!</p>
+    <h2>Add new games to our database of all these games!</h2>
 
-    <form method="POST" action="/games//gameadded"> <!-- change -->
-        <p>Name of game: <input id="name" type="text" name="name" value="" /></p>
-        <p>Price of game: <input id="price" type="text" name="price" value="" /></p>
-        <input type="submit" value="Add Game" class="button"/>
+    <!-- form to add games to the database -->
+    <form method="POST" action="/games//gameadded"> 
+        <p>Name of game: <input id="name" type="text" name="name" value="" /></p> <!-- name of the game -->
+        <p>Price of game: <input id="price" type="text" name="price" value="" /></p> <!-- price of the game -->
+        <input type="submit" value="Add Game" class="button"/> <!-- submit button to add game into the database -->
       </form>
     
   </body>

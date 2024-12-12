@@ -1,10 +1,13 @@
+// Create a new router
 const express = require("express")
 const router = express.Router()
 
+// search route
 router.get('/search',function(req, res, next){
     res.render("search.ejs")
 })
 
+// showing the search results
 router.get('/search_result', function (req, res, next) {
     // Search the database
     let sqlquery = "SELECT * FROM games WHERE name LIKE '%" + req.query.search_text + "%'" // query database to get all the games
@@ -17,7 +20,7 @@ router.get('/search_result', function (req, res, next) {
      }) 
 })
 
-
+// list of games route
 router.get('/list', function(req, res, next) {
     let sqlquery = "SELECT * FROM games" // query database to get all the games
     // execute sql query
@@ -29,10 +32,12 @@ router.get('/list', function(req, res, next) {
      })
 })
 
+// add game route
 router.get('/addgame', function (req, res, next) {
     res.render('addgame.ejs')
 })
 
+// when a game is added to the database
 router.post('/gameadded', function (req, res, next) {
     // saving data in database
     let sqlquery = "INSERT INTO games (name, price) VALUES (?,?)"
@@ -43,12 +48,13 @@ router.post('/gameadded', function (req, res, next) {
             next(err)
         }
         else
-            res.send(' This game is added to database, name: '+ req.body.name + ' price '+ req.body.price)
+            res.send(' This game is added to database, name: '+ req.body.name + ' price '+ req.body.price) // game added to the database message
     })
 }) 
 
+// bargain games route
 router.get('/bargaingames', function(req, res, next) {
-    let sqlquery = "SELECT * FROM games WHERE price < 20"
+    let sqlquery = "SELECT * FROM games WHERE price < 20" // display games that are under £20 in the database
     db.query(sqlquery, (err, result) => {
         if (err) {
             next(err)
@@ -57,42 +63,5 @@ router.get('/bargaingames', function(req, res, next) {
     })
 }) 
 
-
 // Export the router object so index.js can access it
 module.exports = router
-
-// const express = require("express");
-// const router = express.Router();
-// const request = require("request");
-
-// // FreeToGame: Get all games
-// router.get('/games', function (req, res, next) {
-//     const url = 'https://www.freetogame.com/api/games';
-    
-//     request(url, (err, response, body) => {
-//         if (err || response.statusCode !== 200) {
-//             return res.send("Unable to fetch games. Please try again later.");
-//         }
-        
-//         const games = JSON.parse(body);
-//         res.render('games.ejs', { games, error: null });
-//     });
-// });
-
-// // FreeToGame: Get game by ID
-// router.get('/game/:id', function (req, res, next) {
-//     const gameId = req.params.id;
-//     const url = `https://www.freetogame.com/api/game?id=${gameId}`;
-    
-//     request(url, (err, response, body) => {
-//         if (err || response.statusCode !== 200) {
-//             return res.send("Unable to fetch game details. Please try again later.");
-//         }
-        
-//         const game = JSON.parse(body);
-//         res.render('game.ejs', { game, error: null });
-//     });
-// });
-
-// // Export the router
-// module.exports = router;

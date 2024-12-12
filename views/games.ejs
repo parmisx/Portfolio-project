@@ -1,24 +1,82 @@
-<!-- like the weather ejs -->
+<!doctype html>
+<html>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FreeToGame Games</title>
-</head>
-<body>
-    <h1>List of Free-to-Play Games</h1>
-    <% if (error) { %>
-        <p style="color: red;"><%= error %></p>
-    <% } else { %>
-        <ul>
-            <% games.forEach(game => { %>
-                <li>
-                    <a href="/freetogame/game/<%= game.id %>"><%= game.title %></a>
-                </li>
-            <% }) %>
-        </ul>
+  <head>
+    <title>FreeToGame API</title>
+    <link rel="stylesheet"  type="text/css" href="/main.css" />
+  </head>
+
+  <!-- nav -->
+  <nav>
+
+    <ul class="nav-list">
+      <li><a href="/">HOME</a></li>
+    </ul>
+
+  </nav>
+
+  <body>
+
+    <h1>FreeToGame open API</h1>
+
+    <h2>Search for free games in the FreeToGame Database!</h2>
+
+    <!-- form to search for games -->
+    <form method="POST" action="/freetogame/games/search">
+
+      <!-- platform options -->
+        <p>Platform: </p>
+        <select name="platform" required>
+            <option value="pc">PC</option>
+            <option value="browser">Browser</option>
+        </select>
+
+        <!-- category options -->
+        <p>Category: </p>
+        <select name="category">
+            <option value="mmorpg">MMORPG</option>
+            <option value="shooter">Shooter</option>
+            <option value="strategy">Strategy</option>
+            <option value="moba">MOBA</option>
+            <option value="card">Card Game</option>
+            <option value="racing">Racing</option>
+            <option value="sports">Sports</option>
+            <option value="superhero">Superhero</option>
+            <option value="anime">Anime</option>
+            <option value="pvp">PvP</option>
+            <option value="pve">PvE</option>
+            <option value="fantasy">Fantasy</option>
+            <option value="zombie">Zombie</option>
+        </select>
+        <br>
+        <input type="submit" value="Search" class="button"/>
+
+    </form>
+
+    <!-- display the list of games from the api -->
+    <% if (gameData) { %>
+      <h2>Games found:</h2>
+
+      <div class="games-container">
+        
+        <% gameData.forEach(game => { %>
+          <div class="game-list">
+            <img src="<%= game.thumbnail %>"> <!-- game image -->
+            <div class="game-info"> <!-- game information -->
+              <h3><%= game.title %></h3> <!-- game title -->
+              <p><%= game.short_description %></p> <!-- description -->
+              <p><b>Platform:</b> <%= game.platform %></p> <!-- game platform -->
+              <a href="<%= game.game_url %>" target="_blank">Check out!</a> <!-- button to check out the game website -->
+            </div>
+          </div>
+        <% }) %>
+
+      </div>
+      
+    <!-- error handling -->
+    <% } else if (error) { %>
+      <p><%= error %></p>
     <% } %>
-</body>
+
+  </body>
 </html>

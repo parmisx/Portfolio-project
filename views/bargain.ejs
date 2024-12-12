@@ -6,13 +6,11 @@
     <link rel="stylesheet"  type="text/css" href="/main.css" />
   </head>
 
+  <!-- nav -->
   <nav>
 
     <ul class="nav-list">
-      <li><a href="/">Home</a></li>
-      <li><a href="game/search">Search</a></li>
-      <li><a href="players/login">Login</a></li> 
-      <li><a href="logout">Logout</a></li> 
+      <li><a href="/">HOME</a></li>
     </ul>
 
   </nav>
@@ -21,13 +19,13 @@
 
     <h1><%=shopData.shopName%> Shop</h1>
 
-    <h2>Here are our bargain games:</h2>
+    <h2>Here are our bargain games!</h2>
 
-    <p>On this page you can find all the games that are under £20!
-      <br>You do not want to miss out on these limited time offers!
-      <br>Some are even FREE!! 
-    </p>
+    <p>On this page you can find all of our games that are under £20! </p>
+    <p>You do not want to miss out on these limited time offers! </p>
+    <p>Some are even FREE! </p>
 
+    <!-- displays all the games that are under £20 from the database -->
     <div class="games-list-section">
       <table class="games-table">
         <tr>
@@ -35,11 +33,11 @@
           <th>PRICE</th>
       </tr>
       <tr> <% availableGames.forEach(function(game) { %> </tr>
-        <td> <%= game.name %> </td>
-        <td> £<%= game.price %> </td>
+        <td> <%= game.name %> </td> <!-- name of the game -->
+        <td> £<%= game.price %> </td> <!-- price of the game -->
       <% }) %>
       </table>
     </div>
-    
-    </body>
+
+  </body>
 </html>

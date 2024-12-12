@@ -3,6 +3,7 @@ const express = require("express")
 const router = express.Router()
 const request = require('request')
 
+// games route
 router.get('/games', function (req, res, next) {
 
     // Query database to get all the games

@@ -10,10 +10,7 @@
   <nav>
 
     <ul class="nav-list">
-      <li><a href="/">Home</a></li> <!-- change -->
-      <li><a href="game/search">Search</a></li> <!-- change -->
-      <li><a href="players/login">Login</a></li> <!-- change -->
-      <li><a href="logout">Logout</a></li> <!-- change -->
+      <li><a href="/">HOME</a></li> 
     </ul>
   
   </nav>
@@ -24,23 +21,28 @@
 
     <h2>The weather forecast for different cities</h2>
 
-    <p><a href="/londonnow">London right now</a></p>
+    <!-- weather of london right now  -->
+    <p><a href="/londonnow"> -> London right now <- </a></p>
 
+    <!-- form to search for a city to get the weather results -->
     <form action="/weather" method="POST">
       <p>Search for other cities:</p>
-      <input id="weather_search" type="text" name="city_search" required>
-      <input type="submit" value="Search" class="button">
+      <input id="weather_search" type="text" name="city_search" required> <!-- type in the city name -->
+      <input type="submit" value="Search" class="button"> <!-- submit button to search for city -->
     </form>
     
-    <div class="weather-results">
+    <br>
+    
+    <!-- display the weather results -->
       <% if (weatherForecast) { %>
-        <p>Weather in <%= weatherForecast.name %> is...</p>
-        <p>The temperature is: <%= weatherForecast.temp %> degrees</p>
-        <p>The humidity is: <%= weatherForecast.humidity %></p>
-        <p>The wind speed is: <%= weatherForecast.wind %></p>
-        <p>The time is: <%= weatherForecast.timezoneDisplay %></p>
+        <div class="weather-results">
+        <p>Weather in <b><%= weatherForecast.name %></b>:</p> <!-- the city name -->
+        <p>The temperature is: <%= weatherForecast.temp %> degrees</p> <!-- the temperature -->
+        <p>The humidity is: <%= weatherForecast.humidity %></p> <!-- the humidity -->
+        <p>The wind speed is: <%= weatherForecast.wind %></p> <!-- the wind speed -->
+        <p>The time is: <%= weatherForecast.timezoneDisplay %></p> <!-- the timezones -->
+      </div>
       <% } %>
-    </div>
-
+      
     </body>
 </html>

@@ -10,10 +10,7 @@
   <nav>
 
     <ul class="nav-list">
-      <li><a href="/">Home</a></li> <!-- change -->
-      <li><a href="games/search">Search</a></li> <!-- change -->
-      <li><a href="players/login">Login</a></li> <!-- change -->
-      <li><a href="logout">Logout</a></li> <!-- change -->
+      <li><a href="/">HOME</a></li> 
     </ul>
 
   </nav>
@@ -22,14 +19,17 @@
 
     <h1>Register with us in <%=shopData.shopName%>!</h1> 
 
+    <h2>Become one of Game Town's players!</h2>
+
+    <!-- form to register -->
     <form method="POST" action="registered">
-        <p>First name: <input id="firstName" type="text" name="firstName" required/></p>
-        <p>Last name: <input id="lastName" type="text" name="lastName" required/></p>
-        <p>Email: <input id="email" type="text" name="email" required/></p>
-        <p>Username: <input id="username" type="text" name="username" required></p>
-        <p>Password: <input id="password" type="password" name="password" required></p>
-        <input type="submit" value="Register" class="button"/>
-      </form>
+        <p>First name: <input id="firstName" type="text" name="firstName" required/></p> <!-- first name -->
+        <p>Last name: <input id="lastName" type="text" name="lastName" required/></p> <!-- last name -->
+        <p>Email: <input id="email" type="text" name="email" required/></p> <!-- email -->
+        <p>Username: <input id="username" type="text" name="username" required></p> <!-- username -->
+        <p>Password: <input id="password" type="password" name="password" required></p> <!-- password -->
+        <input type="submit" value="Register" class="button"/> <!-- submit button to register -->
+    </form>
 
   </body>
 </html>

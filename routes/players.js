@@ -15,10 +15,12 @@ const redirectLogin = (req, res, next) => {
     }
 }
 
+// register page
 router.get('/register', function (req, res, next) {
     res.render('register.ejs')                                                               
 })    
 
+// registered user
 router.post('/registered', [
     check('email').isEmail(),
     check('password').isLength({min:8}),
@@ -33,11 +35,8 @@ router.post('/registered', [
             res.redirect("./register");
         } else {
             const plainPassword = req.sanitize(req.body.password);
-            // const username = req.body.username;
-            // const firstName = req.body.first_name;
-            // const lastName = req.body.last_name;
-            // const email = req.body.email;
 
+            // hashing for password security
             bcrypt.hash(plainPassword, saltRounds, function(err, hashedPassword){
                 if(err){
                     next(err);
@@ -62,6 +61,7 @@ router.post('/registered', [
     }
 });
 
+// list of all the players (users)
 router.get('/list', redirectLogin, function(req, res, next) {
     let sqlquery = "SELECT * FROM players" // query database to get all the players
     // execute sql query
@@ -73,16 +73,21 @@ router.get('/list', redirectLogin, function(req, res, next) {
      })
 })
 
+// login page
 router.get('/login', function (req, res, next) {
     res.render('login.ejs')                                                        
 })
 
+// when loggedin 
 router.post('/loggedin', 
     [check("username").notEmpty(),
     check('password').isLength({min:8})],
     function(req,res,next){
     const username = req.sanitize(req.body.username);
+    const password = req.sanitize(req.body.password);
+
     let sqlquery = "SELECT hashedPassword FROM players WHERE username = ?"; // query database to get the hashed password with the username
+    
     // execute sql query
     db.query(sqlquery, [username], (err, result) => {
         if(err){

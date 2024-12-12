@@ -9,10 +9,7 @@
   <nav>
 
     <ul class="nav-list">
-      <li><a href="/">Home</a></li>
-      <li><a href="games/search">Search</a></li>
-      <li><a href="players/login">Login</a></li>
-      <li><a href="logout">Logout</a></li>
+      <li><a href="/">HOME</a></li>
     </ul>
 
   </nav>
@@ -23,15 +20,16 @@
     
     <h2>List of all the players registered with us:</h2>
 
+    <!-- display all the players (users) that are registered -->
     <div class="games-list-section">
       <table class="games-table">
         <tr>
-          <th>PLAYER</th>
+          <th>PLAYER</th> 
           <th>USERNAME</th>
       </tr>
       <tr> <% availableGames.forEach(function(players) { %> </tr>
-        <td> <%= players.first_name %> </td>
-        <td> <%= players.username %> </td>
+        <td> <%= players.first_name %> </td> <!-- the user's first name -->
+        <td> <%= players.username %> </td> <!-- the user's username -->
       <% }) %>
       </table>
     </div>

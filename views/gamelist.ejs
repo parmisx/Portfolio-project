@@ -6,13 +6,11 @@
     <link rel="stylesheet"  type="text/css" href="/main.css" />
   </head>
 
+  <!-- nav -->
   <nav>
 
     <ul class="nav-list">
-      <li><a href="/">Home</a></li>
-      <li><a href="games/search">Search</a></li>
-      <li><a href="players/login">Login</a></li>
-      <li><a href="logout">Logout</a></li> 
+      <li><a href="/">HOME</a></li>
     </ul>
 
   </nav>
@@ -23,6 +21,7 @@
     
     <h2>All the games that we sell!</h2>
 
+    <!-- displays all the games that are in the database -->
     <div class="games-list-section">
       <table class="games-table">
         <tr>
@@ -30,8 +29,8 @@
           <th>PRICE</th>
       </tr>
       <tr> <% availableGames.forEach(function(game) { %> </tr>
-        <td> <%= game.name %> </td>
-        <td> £<%= game.price %> </td>
+        <td> <%= game.name %> </td> <!-- name of the game -->
+        <td> £<%= game.price %> </td> <!-- price of the game -->
       <% }) %>
       </table>
     </div>

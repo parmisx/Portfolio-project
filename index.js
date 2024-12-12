@@ -67,17 +67,18 @@ app.use('/players', playersRoutes)
 const gamesRoutes = require('./routes/games')
 app.use('/games', gamesRoutes)
 
-// load the route handlers for weather
+// Load the route handlers for weather
 const weatherRoutes = require('./routes/weather')
 app.use('/', weatherRoutes)
 
-// load the route handlers for books api
+// Load the route handlers for games api
 const apiRoutes = require('./routes/api')
 app.use('/api', apiRoutes)
 
-// load the route handlers for FreeToGame API
-const freetogameRoutes = require('./routes/games');
-app.use('/games', freetogameRoutes);
+// Load the route handlers for freetogame open api
+const freetogameRoutes = require('./routes/freetogame');
+app.use('/freetogame', freetogameRoutes);
+
 
 // Start the web app listening
 app.listen(port, () => console.log(`Node app listening on port ${port}!`))
