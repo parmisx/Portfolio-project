@@ -14,7 +14,7 @@ Install these if you haven't already:
 - npm install mysql2
 - sudo apt install node.js
 
-If you get an error saying "Access denied", do the following please:
+### If you get an error saying "Access denied", do the following please:
 1. go into SQL
 2. do: source createGame_db.sql;
 3. and: source insert_testData.sql;
