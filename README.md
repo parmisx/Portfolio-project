@@ -16,9 +16,9 @@ Install these if you haven't already:
 
 ### If you get an error saying "Access denied", do the following please:
 1. go into SQL
-2. do: source createGame_db.sql;
-3. and: source insert_testData.sql;
+2. source createGame_db.sql;
+3. source insert_testData.sql;
 
-To get the application running: node index.js 
+### To get the application running: node index.js 
 
 Thank you!
